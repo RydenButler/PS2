@@ -1,4 +1,4 @@
-fraud <- function(x, type='m'){
+calc.benfords <- function(x, type='m'){
   # Convert all digits in x to strings. 
   # Remove all characters in each string except the leading coefficient
   # Convert the character digits to a factor from 1 to 9
@@ -32,14 +32,14 @@ test.vector <- rep(1,1000)
 test.matrix <- sample(1:9, 1000, replace = T)
 
 # Test Leemis on each object type
-fraud(test.vector)
-fraud(test.matrix)
+calc.benfords(test.vector)
+calc.benfords(test.matrix)
 # Test Cho-Gains on each object type
-fraud(test.vector, type = 'd')
-fraud(test.matrix, type = 'd')
+calc.benfords(test.vector, type = 'd')
+calc.benfords(test.matrix, type = 'd')
 # Test both on each object type
-fraud(test.vector, type = 'both')
-fraud(test.matrix, type = 'both')
+calc.benfords(test.vector, type = 'both')
+calc.benfords(test.matrix, type = 'both')
 
 
 

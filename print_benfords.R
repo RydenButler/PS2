@@ -1,6 +1,6 @@
 print.benfords <- function(x, type='m'){
-
-  Values <- fraud(x=x, type=type)
+  source("calc_benfords.R")
+  Values <- calc.benfords(x=x, type=type)
   if(type == 'm' | type == 'both'){
     M <- Values$LeemisM
     M <- ifelse(M < 0.851, M, # This ifelse chain appends the stars
