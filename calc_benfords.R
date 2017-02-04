@@ -27,20 +27,6 @@ calc.benfords <- function(x, type='m'){
   return(output)
 }
 
-# Create vector and matrix for testing function
-test.vector <- rep(1,1000)
-test.matrix <- sample(1:9, 1000, replace = T)
-
-# Test Leemis on each object type
-calc.benfords(test.vector)
-calc.benfords(test.matrix)
-# Test Cho-Gains on each object type
-calc.benfords(test.vector, type = 'd')
-calc.benfords(test.matrix, type = 'd')
-# Test both on each object type
-calc.benfords(test.vector, type = 'both')
-calc.benfords(test.matrix, type = 'both')
-
 
 
 
